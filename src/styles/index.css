@@ -1,0 +1,15 @@
+:root{
+    --blue-gradient:linear-gradient(#00B4DB, #0083B0);
+    --blue: #0083B0;
+}
+
+.navigation{
+    display:flex;
+    gap: 2.5rem;
+
+}
+
+:root{
+    --border:1px solid rgba(238, 238, 238, 0.5);
+
+}
