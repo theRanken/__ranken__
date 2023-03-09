@@ -46,7 +46,4 @@
     bottom: -10px;
     border-radius: 10px;
 }
-.navbar-outermost-wrapper{
-  border-bottom: var(--border);
-}
 </style>

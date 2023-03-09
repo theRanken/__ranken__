@@ -1,6 +1,33 @@
+import { RiFacebookCircleFill } from 'oh-vue-icons/icons';
 <template>
     <div class="footer">
-        <p class="m-4">&copy;Rankencorp</p>
+        <div class="flex">
+            <div class="m-4">
+                <a href="javascript:void(0)" class="text-4xl">
+                    <i class="ri-facebook-circle-fill"></i>
+                </a>
+            </div>
+            <div class="m-4">
+                <a href="javascript:void(0)" class="text-4xl">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+            </div>
+            <div class="m-4">
+                <a href="javascript:void(0)" class="text-4xl">
+                    <i class="ri-twitter-fill"></i>
+                </a>
+            </div>
+            <div class="m-4">
+                <a href="javascript:void(0)" class="text-4xl">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+            </div>
+            <div class="m-4">
+                <a href="javascript:void(0)" class="text-4xl">
+                    <i class="ri-github-fill"></i>
+                </a>
+            </div>
+        </div>
     </div>
 </template>
 
