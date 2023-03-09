@@ -1,9 +1,11 @@
 <template>
   <div class="px-8 sm:px-20 xl:py-5 py-3 navbar-outermost-wrapper">
     <div class="navbar-wrapper flex justify-between items-center">
-      <div class="flex-none w-16 text-3xl">Rankencorp</div>
-
-      <nav>
+      <div class="flex-none w-16 text-3xl font-bold">Rankencorp</div>
+      <div id="toggle" v-if="mobile" @click="hidden = !hidden">
+        <i class="ri-menu-4-fill text-4xl"></i>
+      </div>
+      <nav class="nav" :class="{hide:hidden}">
           <ul class="navigation">
             <li class="nav-item">
               <a href="/#Home" class="nav-link">Home</a>
@@ -26,21 +28,53 @@
 
 
 <script setup>
+import { ref, onMounted} from 'vue'
+const hidden = ref(window.innerWidth < 1000)
+const mobile = ref(window.innerWidth < 1000)
 
+
+const handleResize = () => {
+  if(window.innerWidth < 1000){
+    mobile.value = true;
+    hidden.value = true;
+  }else{
+     mobile.value = false;
+     hidden.value = false;
+  }
+};
+
+onMounted(()=>{
+  window.addEventListener('resize', handleResize);
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.navigation{
+    display:flex;
+    gap: 2.5rem;
+
+}
+.hide{
+  display:none;
+  opacity:0;
+  transition: opacity .3s ease;
+}
+.navbar-outermost-wrapper{
+  z-index: 9999;
+}
 .nav-item{
     display:flex;
     flex-direction: column;
     position: relative;
 }
+.hide{
 
+}
 .active-indicator{
-    background: var(--blue-gradient);
+    background: var(--black-gradient);
     position: absolute;
-    height: 3px;
+    height: 5px;
     width:100%;
     left: 0;
     bottom: -10px;

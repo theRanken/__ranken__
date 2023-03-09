@@ -1,7 +1,8 @@
 <template>
     <img class=""/>
       <NavBar />
-      <div class="w-100">
+      <IndicatorDots />
+      <div class="body"> 
         <slot />
       </div>
       <FooterComp />
@@ -9,11 +10,14 @@
 
 
 <script setup>
-import NavBar from '../components/NavBar';
-import FooterComp from '../components/FooterComp';
+import NavBar from '../components/NavBar'
+import FooterComp from '../components/FooterComp'
+import IndicatorDots from '../components/IndicatorDots'
 
 </script>
 
 <style>
-
+.body{
+  position:relative;
+}
 </style>

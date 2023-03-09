@@ -1,7 +1,7 @@
 import { RiFacebookCircleFill } from 'oh-vue-icons/icons';
 <template>
     <div class="footer">
-        <div class="flex">
+        <div class="flex items-center">
             <div class="m-4">
                 <a href="javascript:void(0)" class="text-4xl">
                     <i class="ri-facebook-circle-fill"></i>
@@ -39,12 +39,12 @@ import { RiFacebookCircleFill } from 'oh-vue-icons/icons';
 
 <style scoped>
 .footer{
-    position:absolute;
+    position:fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     display:grid;
     place-items:center;
     border-top: var(--border);
 }
-
 </style>
